@@ -1,0 +1,2 @@
+# thehardtake-news
+TheHardTakeNews 
