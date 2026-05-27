@@ -1,3 +1,138 @@
-document.addEventListener("DOMContentLoaded", () => {
-  console.log("The Hard Take News site loaded successfully.");
-});
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #0a0a0a;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+.navbar {
+    background: #000;
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 3px solid #ff0000;
+}
+
+.logo-img {
+    height: 70px;
+}
+
+.nav-links a {
+    color: #ddd;
+    text-decoration: none;
+    margin: 0 1.2rem;
+    font-weight: 500;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: #ff0000;
+}
+
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('https://picsum.photos/id/1015/1600/900') center/cover;
+    height: 65vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.breaking {
+    background: #ff0000;
+    padding: 8px 20px;
+    border-radius: 4px;
+    font-size: 1rem;
+    display: inline-block;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    max-width: 900px;
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+}
+
+.read-more {
+    background: #ff0000;
+    color: white;
+    border: none;
+    padding: 14px 35px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 5%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+}
+
+.news-card {
+    background: #111;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+
+.news-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(255, 0, 0, 0.2);
+}
+
+.news-card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+.category {
+    color: #ff0000;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.sidebar {
+    background: #111;
+    padding: 1.5rem;
+    border-radius: 8px;
+    height: fit-content;
+}
+
+footer {
+    text-align: center;
+    padding: 2.5rem;
+    background: #000;
+    border-top: 3px solid #ff0000;
+    color: #888;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .nav-links { display: none; }
+    .container { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 2.2rem; }
+}
