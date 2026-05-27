@@ -1,3 +1,4 @@
+
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
@@ -13,14 +14,19 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 100;
     border-bottom: 3px solid #ff0000;
 }
 
-.logo-img {
-    height: 70px;
+.logo h1 {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    color: #ff0000;
+}
+
+.tagline {
+    font-size: 0.75rem;
+    color: #888;
+    letter-spacing: 1px;
 }
 
 .nav-links a {
@@ -34,6 +40,12 @@ body {
     color: #ff0000;
 }
 
+.theme-toggle {
+    cursor: pointer;
+    font-size: 1.3rem;
+    color: white;
+}
+
 .hero {
     background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('https://picsum.photos/id/1015/1600/900') center/cover;
     height: 65vh;
@@ -41,37 +53,37 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: white;
 }
 
 .breaking {
     background: #ff0000;
     padding: 8px 20px;
     border-radius: 4px;
-    font-size: 1rem;
     display: inline-block;
     margin-bottom: 1rem;
     font-weight: bold;
 }
 
 .hero h1 {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
     margin-bottom: 1rem;
-    max-width: 900px;
+    max-width: 800px;
+    color: white;
 }
 
 .hero-subtitle {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     max-width: 700px;
     margin: 0 auto 2rem;
+    color: #ccc;
 }
 
 .read-more {
     background: #ff0000;
     color: white;
     border: none;
-    padding: 14px 35px;
-    font-size: 1.1rem;
+    padding: 12px 30px;
+    font-size: 1rem;
     cursor: pointer;
     border-radius: 4px;
 }
@@ -87,7 +99,7 @@ body {
 
 .news-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.5rem;
 }
 
@@ -95,43 +107,113 @@ body {
     background: #111;
     border-radius: 8px;
     overflow: hidden;
-    transition: all 0.3s;
-}
-
-.news-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 20px rgba(255, 0, 0, 0.2);
 }
 
 .news-card img {
     width: 100%;
-    height: 210px;
+    height: 200px;
     object-fit: cover;
+}
+
+.news-content {
+    padding: 1rem;
 }
 
 .category {
     color: #ff0000;
     font-weight: bold;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+}
+
+.news-card h3 {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+}
+
+.news-card a {
+    color: #ff0000;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .sidebar {
     background: #111;
     padding: 1.5rem;
     border-radius: 8px;
-    height: fit-content;
+}
+
+.facebook-badge {
+    background: #1877f2;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.facebook-badge i {
+    font-size: 2rem;
+}
+
+.facebook-badge button {
+    background: white;
+    color: #1877f2;
+    border: none;
+    padding: 8px 16px;
+    margin-top: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.sidebar ul {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.sidebar li {
+    padding: 8px 0;
+    border-bottom: 1px solid #222;
 }
 
 footer {
     text-align: center;
-    padding: 2.5rem;
+    padding: 2rem;
     background: #000;
-    border-top: 3px solid #ff0000;
-    color: #888;
+    border-top: 1px solid #ff0000;
+    color: #666;
 }
 
+footer a {
+    color: #1877f2;
+    text-decoration: none;
+}
+
+/* Light mode */
+body.light-mode {
+    background: #f0f0f0;
+    color: #111;
+}
+
+body.light-mode .news-card,
+body.light-mode .sidebar {
+    background: white;
+}
+
+body.light-mode .navbar {
+    background: white;
+}
+
+body.light-mode .tagline {
+    color: #555;
+}
+
+body.light-mode .theme-toggle {
+    color: #111;
+}
+
+/* Mobile */
 @media (max-width: 768px) {
     .nav-links { display: none; }
     .container { grid-template-columns: 1fr; }
-    .hero h1 { font-size: 2.2rem; }
+    .hero h1 { font-size: 1.8rem; }
 }
