@@ -3,36 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Hard Take News | Independent South African News</title>
+    <title>The Hard Take News | Independent SA News</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <nav class="navbar">
-            <div class="logo">
-                <img src="https://via.placeholder.com/400x100/000000/FFFFFF?text=THE+HARD+TAKE+NEWS" alt="The Hard Take News" class="logo-img">
-            </div>
-            
-            <div class="nav-links">
-                <a href="#" class="active">Home</a>
-                <a href="#">Politics</a>
-                <a href="#">Business</a>
-                <a href="#">Sports</a>
-                <a href="#">Community</a>
-                <a href="#">Investigations</a>
-            </div>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="https://via.placeholder.com/150x70?text=The+Hard+Take+News" alt="The Hard Take News" class="logo-img">
+        </div>
+        <div class="nav-links">
+            <a href="#" class="active">Home</a>
+            <a href="#">Politics</a>
+            <a href="#">Business</a>
+            <a href="#">Sports</a>
+            <a href="#">Community</a>
+            <a href="#">Investigations</a>
+        </div>
+        <div class="theme-toggle">
+            <i class="fas fa-moon"></i>
+        </div>
+    </nav>
 
-            <div class="nav-actions">
-                <button id="search-btn"><i class="fas fa-search"></i></button>
-                <button id="theme-toggle"><i class="fas fa-moon"></i></button>
-                <button class="hamburger"><i class="fas fa-bars"></i></button>
-            </div>
-        </nav>
-    </header>
-
-    <!-- Hero -->
     <section class="hero">
         <div class="hero-content">
             <span class="breaking">BREAKING</span>
@@ -42,50 +34,57 @@
         </div>
     </section>
 
-    <main class="container">
-        <div class="news-grid">
+    <div class="container">
+        <main class="news-grid">
             <article class="news-card">
-                <img src="https://picsum.photos/id/1015/600/400" alt="">
-                <div class="card-content">
+                <img src="https://picsum.photos/id/104/400/250" alt="News image">
+                <div class="news-content">
                     <span class="category">Politics</span>
-                    <h3>Coalition Crisis: DA and ANC on collision course in Johannesburg</h3>
-                    <p>2 hours ago • Johannesburg</p>
+                    <h3>City Power CEO Suspended Over Irregular Contracts</h3>
+                    <p>Whistleblower reveals R500 million in questionable tenders.</p>
+                    <a href="#">Read more →</a>
                 </div>
             </article>
-
             <article class="news-card">
-                <img src="https://picsum.photos/id/201/600/400" alt="">
-                <div class="card-content">
+                <img src="https://picsum.photos/id/20/400/250" alt="News image">
+                <div class="news-content">
                     <span class="category">Business</span>
-                    <h3>Rand strengthens as Eskom announces reduced load shedding</h3>
-                    <p>5 hours ago • Cape Town</p>
+                    <h3>Rand Slumps Amid Load Shedding Fears</h3>
+                    <p>Eskom warns of higher stages this winter.</p>
+                    <a href="#">Read more →</a>
                 </div>
             </article>
-
             <article class="news-card">
-                <img src="https://picsum.photos/id/870/600/400" alt="">
-                <div class="card-content">
+                <img src="https://picsum.photos/id/66/400/250" alt="News image">
+                <div class="news-content">
                     <span class="category">Community</span>
-                    <h3>Durban residents demand answers over recurring flooding</h3>
-                    <p>Yesterday • Durban</p>
+                    <h3>Diepsloot Residents Demand Action on Crime</h3>
+                    <p>Community march scheduled for Monday.</p>
+                    <a href="#">Read more →</a>
                 </div>
             </article>
-        </div>
+        </main>
 
-        <!-- Sidebar -->
         <aside class="sidebar">
             <h3>Trending</h3>
             <ul>
-                <li><a href="#">• Xenophobia tensions rise in Gauteng townships</a></li>
-                <li><a href="#">• Bafana Bafana eye AFCON glory</a></li>
-                <li><a href="#">• Parliament committee grills ministers on corruption</a></li>
+                <li>🔴 Tshwane Mayor Facing No-Confidence Vote</li>
+                <li>🟠 Fuel Price Increase Expected Next Week</li>
+                <li>🟢 Bafana Bafana AFCON Qualification Hopes</li>
+                <li>🔵 New Cabinet Reshuffle Rumors</li>
+                <li>🟣 eThekwini Water Crisis Deepens</li>
             </ul>
+            <h3>Follow Us</h3>
+            <p>
+                <i class="fab fa-twitter"></i> Twitter |
+                <i class="fab fa-facebook"></i> Facebook |
+                <i class="fab fa-instagram"></i> Instagram
+            </p>
         </aside>
-    </main>
+    </div>
 
     <footer>
-        <p>&copy; 2026 The Hard Take News • Independent • Fearless • South African</p>
-        <p>Powered by DigitalVisionZA</p>
+        <p>&copy; 2026 The Hard Take News. Independent. Fearless. Accountable.</p>
     </footer>
 
     <script src="script.js"></script>
